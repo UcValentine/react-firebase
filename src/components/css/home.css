@@ -1,0 +1,236 @@
+body {
+  margin: 30px 50px;
+  line-height: 1.4;
+  animation: animation 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");   
+}
+@keyframes animation {
+  100%{
+   background-position:0px -3000px;
+ }
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+  background: #ddd;
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.main-nav a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+.top-box {
+  background: #ddd;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+.txt{
+  text-align: justify;
+  padding: 10px;
+  box-shadow:  inset 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.btn{
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  margin-left: 15px;
+  text-decoration: none;
+  border: 0;
+  border-radius: .25rem;
+}
+.btn:hover{
+  background: #4CAF50;
+  color: #333;
+}
+.btn:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: #ddd;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin: 14px 0 14px 0;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.box:hover{
+  background: none;
+  color: #fff;
+	border: none;
+	box-shadow: 5px 5px 10px #9E9E9E;
+}
+
+#inputText{
+  width:95%;
+  height:175px;
+  padding:15px 12px;
+  margin-bottom: 15px;
+  background:#fff;
+  color:#444;
+  border:1px solid rgba(0,0,0,.14);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+  border-radius:3px;
+  resize:none;
+  transition:all 0.5s ease-out
+}
+
+.info {
+  background: #ddd;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  margin-bottom: 15px;
+}
+
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+img:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px rgba(255, 215, 97, 0.48);
+}
+
+footer {
+  margin-top: 2rem;
+  background:#35424a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+footer a{
+  color:lightblue;
+}
+
+footer a:hover{
+  color:white;
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    grid-template-areas:
+      'showcase'
+      'top-box-a'
+      'top-box-b';
+  }
+}
