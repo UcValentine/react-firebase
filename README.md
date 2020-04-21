@@ -1,3 +1,10 @@
+To sum it up this little project was implemented using:
+- react JS
+- plain css (NOT BOOTSTRAP),
+- with data stored in firebase
+- the project is published online in AWS, see the project here: https://master.d5tftzjcottd7.amplifyapp.com/
+-------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
